@@ -11,6 +11,7 @@ import com.chilllover.chillnet.services.CustomUserDetailsServiceImpl;
 import com.chilllover.chillnet.services.email.EmailService;
 import jakarta.mail.MessagingException;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpHeaders;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -108,4 +109,5 @@ public class AuthServiceImpl implements AuthService{
         user.setResetTokenExpiry(null);
         userRepository.save(user);
     }
+
 }
